@@ -3,45 +3,74 @@
 <head>
 <meta charset="utf-8">
 <title>About us</title>
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <style>
-    #css-script-menu{position:absolute;height:90px;width:100%;top:0;left:0;border-top:5px solid #16a1e7;background:#fff;-moz-box-shadow:0 2px 3px 0 rgba(0,0,0,.16);-webkit-box-shadow:0 2px 3px 0 rgba(0,0,0,.16);box-shadow:0 2px 3px 0 rgba(0,0,0,.16);z-index:999999;padding:10px 0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.css-script-center{max-width:960px;margin:0 auto}.css-script-center ul{width:212px;float:left;line-height:45px;margin:0;padding:0;list-style:none}.css-script-center a{text-decoration:none}.css-script-ads{max-width:728px;height:90px;float:right}.css-script-clear{clear:both;height:0}#carbonads{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,Helvetica,Arial,sans-serif}#carbonads{display:block;overflow:hidden;max-width:728px;position:relative;font-size:22px;box-sizing:content-box}#carbonads>span{display:block}#carbonads a{color:#111;text-decoration:none}#carbonads a:hover{color:#000}.carbon-wrap{display:flex;align-items:center}.carbon-img{display:block;margin:0;line-height:1}.carbon-img img{display:block;height:90px;width:auto}.carbon-text{display:block;padding:0 1em;line-height:1.35;text-align:left}.carbon-poweredby{display:block;position:absolute;bottom:0;right:0;padding:6px 10px;text-align:center;text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:8px;border-top-left-radius:4px;line-height:1;color:#ccc!important}@media only screen and (min-width:320px) and (max-width:759px){.carbon-text{font-size:14px}}
+body, div, ul, li {
+  margin: 0;
+  padding-left: 0px;
+}
+
+.carousel {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.panes {
+    list-style: none;
+    position: relative;
+    width: 300%;
+    animation: carousel 30s infinite;
+}
+
+.panes > li {
+  position: relative;
+  float: left;
+  width: 33.3333%;
+}
+
+.carousel .text {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
 </style>
 </head>
 <body>
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/Monaco-sunset-2560x1600/2302-11.jpg" alt="...">
-            <div class="carousel-caption" style="text-shadow: 5px 5px 10px #e8e2e2;">
-            </div>
-        </div>
-        <div class="item">
-            <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/Santorini-0ia-Greece-2560x1600/1292-11.jpg" alt="...">
-            <div class="carousel-caption">
-            </div>
-        </div>
-        <div class="item">
-            <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/San-Francisco-2560x1600/7440-11.jpg" alt="...">
-            <div class="carousel-caption">
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
-<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js'></script>
+    <div class="carousel">
+        <ul class="panes">
+           <li>
+              <div class='text'></div>
+              <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/Monaco-sunset-2560x1600/2302-11.jpg" class="d-block w-100" alt="...">
+           </li>
+           <li>
+              <div class='text'></div>
+              <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/Santorini-0ia-Greece-2560x1600/1292-11.jpg" class="d-block w-100" alt="...">
+           </li>
+           <li>
+              <div class='text'></div>
+              <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/San-Francisco-2560x1600/7440-11.jpg" class="d-block w-100" alt="...">
+           </li>
+        </ul>
+     </div>
 </body>
 </html>
